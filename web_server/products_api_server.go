@@ -52,9 +52,11 @@ func (p *ProductsApiServer) ListProducts() http.HandlerFunc {
 		p3 := resources.CreateProduct("Pepper", "Pepper or black pepper is the dried unripe fruit grown in the plant called piper nigrum. It's pungent smell, peppery/hot taste and health friendly properties make pepper a favorite spice all over the world and it is commonly used in all cuisines.")
 		p3.GetRating(p.ratingEndpoint)
 
+
 		products = append(products, p1)
 		products = append(products, p2)
 		products = append(products, p3)
+
 		log.Printf("%#v", products)
 		utils.WriteResponse(w, http.StatusOK, products)
 	}

@@ -9,12 +9,13 @@ import (
 
 type Product struct {
 	Id          string `json:"id"`
+	Name        string `json:"name"`
 	Description string `json:"description"`
 	Rating      Rating `json:"rating"`
 }
 
 func CreateProduct(name string, description string) Product {
-	return Product{Id: name, Description: description}
+	return Product{Id: name, Name: name, Description: description}
 }
 
 func (p *Product) RateProduct(text string, stars int) error {

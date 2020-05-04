@@ -8,7 +8,7 @@ import (
 
 func main() {
 	//ratingEndpoint := os.Getenv("RATING_ENDPOINT")
-	ratingEndpoint := "http://0.0.0.0:9998/v1/ratings"
+	ratingEndpoint := "http://ratings:9998/v1/ratings"
 
 	server := web_server.NewProductsApiServer(9999, ratingEndpoint)
 
